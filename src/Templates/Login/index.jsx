@@ -1,16 +1,23 @@
-import * as Styled from './styles';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
+import jwt from 'jsonwebtoken';
 import { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import { UserContext } from '../../contexts/UserProvider/context';
 import * as types from '../../contexts/UserProvider/types';
-import { useHistory } from 'react-router-dom';
+
+import * as Styled from './styles';
 
 export const Login = () => {
   const userContext = useContext(UserContext);
   const history = useHistory();
 
   const handleSubmit = (values) => {
+    const token = jwt.sign(values, values.email, {
+      expiresIn: 5000,
+    });
+    localStorage.setItem('token', token);
     userContext.userDispatch({ type: types.SET_USER_DATA, payload: values });
     history.push('/');
   };
