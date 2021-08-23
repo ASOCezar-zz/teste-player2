@@ -1,7 +1,17 @@
-import './App.css';
+import { useContext } from 'react';
+import { UserContext } from '../../contexts/UserProvider/context';
+import './styles';
 
-function App() {
-  return <div className="App"></div>;
-}
+export const Home = () => {
+  const userContext = useContext(UserContext);
+  const {
+    userState: { email, password },
+  } = userContext;
 
-export default App;
+  return (
+    <div>
+      <h1>{email}</h1>
+      <h1>{password}</h1>
+    </div>
+  );
+};
