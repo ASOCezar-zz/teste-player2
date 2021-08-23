@@ -7,19 +7,23 @@ import { GlobalStyles } from './styles/global-styles';
 import { Login } from './Templates/Login';
 import { Home } from './Templates/Home';
 import { NotFound } from './components/NotFound';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UserProvider>
-      <GlobalStyles />
-      <BrowserRouter>
-        <Switch>
-          <Route component={Login} path="/login" />
-          <Route component={Home} exact path="/" />
-          <Route component={NotFound} path="*" />
-        </Switch>
-      </BrowserRouter>
-    </UserProvider>
+    <ThemeProvider theme={theme}>
+      <UserProvider>
+        <GlobalStyles />
+        <BrowserRouter>
+          <Switch>
+            <Route component={Login} path="/login" />
+            <Route component={Home} exact path="/" />
+            <Route component={NotFound} path="*" />
+          </Switch>
+        </BrowserRouter>
+      </UserProvider>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

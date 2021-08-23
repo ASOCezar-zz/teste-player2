@@ -17,8 +17,8 @@ export const Login = () => {
     const token = jwt.sign(values, values.email, {
       expiresIn: 5000,
     });
-    localStorage.setItem('token', token);
-    userContext.userDispatch({ type: types.SET_USER_DATA, payload: values });
+    const userValues = { ...values, token };
+    userContext.userDispatch({ type: types.SET_USER_DATA, payload: userValues });
     history.push('/');
   };
 
