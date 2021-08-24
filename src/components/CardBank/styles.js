@@ -91,7 +91,7 @@ export const Container = styled.div`
             border-radius: 6px;
             padding: 5px 0;
             text-align: center;
-            z-index: 1;
+            z-index: 3;
             width: 172px;
             height: 52px;
             animation: ${openOptions ? showOption : hideOption} 250ms ease-in-out forwards;
