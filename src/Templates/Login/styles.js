@@ -67,15 +67,15 @@ export const Container = styled.div`
           box-shadow: 0px 0px 0px 0px rgba(71, 79, 99, 0.15);
         }
 
-        .form-field.focus-visible {
+        .form-field:focus-visible {
             box-shadow: 0px 10px 15px 0px rgba(71, 79, 99, 0.15);
           }
 
-        #email.form-field.focus-visible {
+        #email.form-field:focus-visible {
           ${isEmailBlank ? isError(theme) : isnotError(theme)};
         }
 
-        #password.form-field.focus-visible {
+        #password.form-field:focus-visible {
           ${isPasswordBlank ? isError(theme) : isnotError(theme)};
         }
 

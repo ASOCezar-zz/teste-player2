@@ -80,7 +80,6 @@ export const Container = styled.div`
           border: none;
           background-color: transparent;
           cursor: pointer;
-          z-index: 3;
 
           .tooltip {
             position: absolute;
@@ -92,6 +91,7 @@ export const Container = styled.div`
             border-radius: 6px;
             padding: 5px 0;
             text-align: center;
+            z-index: 3;
             width: 172px;
             height: 52px;
             animation: ${openOptions ? showOption : hideOption} 250ms ease-in-out forwards;

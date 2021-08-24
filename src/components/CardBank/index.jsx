@@ -20,7 +20,7 @@ export const CardBank = ({ name, code = null, ispb }) => {
   };
 
   return (
-    <Styled.Container openOptions={openOptions} onClick={() => handleRedirect(code)}>
+    <Styled.Container openOptions={openOptions}>
       <div className="head-card">
         <div className="dispatching-card">
           <label>Disparando agora ...</label>
@@ -42,7 +42,7 @@ export const CardBank = ({ name, code = null, ispb }) => {
           </button>
         </div>
       </div>
-      <div className="content-card">
+      <div className="content-card" onClick={() => handleRedirect(code)}>
         <div className="img-content-card">
           <img src={icon} />
         </div>
