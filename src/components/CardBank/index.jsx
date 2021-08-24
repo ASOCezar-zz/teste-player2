@@ -1,36 +1,54 @@
 import * as Styled from './styles';
 import PropTypes from 'prop-types';
 
-export const CardBank = ({ name, code = null, ispb }) => (
-  <Styled.Container>
-    <div className="head-card">
-      <div className="dispatching-card">
-        <label>Disparando agora ...</label>
-        <img></img>
+import optionsIcon from '../../assets/cards_imgs/options.svg';
+import arrowRight from '../../assets/cards_imgs/arrow_right.svg';
+import connections from '../../assets/cards_imgs/connections.svg';
+import icon from '../../assets/cards_imgs/main.svg';
+import deleteIcon from '../../assets/icons/delete-icon.svg';
+
+import { useState } from 'react';
+
+export const CardBank = ({ name, code = null, ispb }) => {
+  const [openOptions, setOpenOptions] = useState(false);
+
+  return (
+    <Styled.Container openOptions={openOptions}>
+      <div className="head-card">
+        <div className="dispatching-card">
+          <label>Disparando agora ...</label>
+          <img src={arrowRight} />
+        </div>
+        <div className="profiles-card">
+          <img src={connections} />
+          <span>23</span>
+        </div>
+        <div className="options-card">
+          <button className="btn-options" onClick={() => setOpenOptions(!openOptions)}>
+            <div className="tooltip">
+              <div className="tooltip-text">
+                <img src={deleteIcon} />
+                <p>Deletar Banco</p>
+              </div>
+            </div>
+            <img src={optionsIcon} />
+          </button>
+        </div>
       </div>
-      <div className="profiles-card">
-        <img></img>
-        <span>23</span>
+      <div className="content-card">
+        <div className="img-content-card">
+          <img src={icon} />
+        </div>
+        <div className="txt-content-card">
+          <h4>
+            {name} - {code}
+          </h4>
+          <h4>ISPB: {ispb}</h4>
+        </div>
       </div>
-      <div className="options-card">
-        <button className="btn-options">
-          <img></img>
-        </button>
-      </div>
-    </div>
-    <div className="content-card">
-      <div className="img-content-card">
-        <img></img>
-      </div>
-      <div className="txt-content-card">
-        <h4>
-          {name} - {code}
-        </h4>
-        <h4>ISPB: {ispb}</h4>
-      </div>
-    </div>
-  </Styled.Container>
-);
+    </Styled.Container>
+  );
+};
 
 CardBank.propTypes = {
   name: PropTypes.string.isRequired,
