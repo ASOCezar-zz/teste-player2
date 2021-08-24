@@ -9,41 +9,6 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    header {
-      position: fixed;
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      height: 44px;
-      gap: 24px;
-      top: 0;
-      left: 0;
-      background-color: ${theme.colors.background};
-      align-items: center;
-      justify-content: flex-start;
-      z-index: 2;
-
-      .btn-open-menu {
-        padding: 0;
-        border: none;
-        width: 44px;
-        height: 44px;
-        img {
-          min-width: 100%;
-          min-height: 100%;
-        }
-      }
-
-      .page-title {
-        width: 100%;
-        height: 100%;
-        margin-right: 24px;
-        border-bottom: 1px solid ${theme.colors.secondaryFont};
-        display: flex;
-        align-items: center;
-      }
-    }
-
     main {
       margin-top: 44px;
       display: flex;

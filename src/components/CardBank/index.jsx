@@ -8,12 +8,19 @@ import icon from '../../assets/cards_imgs/main.svg';
 import deleteIcon from '../../assets/icons/delete-icon.svg';
 
 import { useState } from 'react';
+import { useHistory } from 'react-router';
 
 export const CardBank = ({ name, code = null, ispb }) => {
+  const history = useHistory();
+
   const [openOptions, setOpenOptions] = useState(false);
 
+  const handleRedirect = (code) => {
+    !!code && history.push(`/${code}`);
+  };
+
   return (
-    <Styled.Container openOptions={openOptions}>
+    <Styled.Container openOptions={openOptions} onClick={() => handleRedirect(code)}>
       <div className="head-card">
         <div className="dispatching-card">
           <label>Disparando agora ...</label>

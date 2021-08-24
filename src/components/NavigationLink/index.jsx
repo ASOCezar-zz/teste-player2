@@ -8,7 +8,7 @@ import groupsIcon from '../../assets/icons/navlink/groups.svg';
 import logoutIcon from '../../assets/icons/navlink/logout.svg';
 import arrowDown from '../../assets/icons/navlink/arrow-down.svg';
 
-export const NavLink = ({ isOpen }) => (
+export const NavigationLink = ({ isOpen }) => (
   <Styled.Container isOpen={isOpen}>
     <div className="title-navlink">
       <img src={logoNavlink} />
@@ -59,6 +59,6 @@ export const NavLink = ({ isOpen }) => (
   </Styled.Container>
 );
 
-NavLink.propTypes = {
+NavigationLink.propTypes = {
   isOpen: PropTypes.bool.isRequired,
 };

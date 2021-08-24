@@ -2,11 +2,12 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme, isOpen }) => css`
-    position: fixed;
+    position: absolute;
     width: ${isOpen ? '100%' : '0'};
     visibility: ${isOpen ? 'visible' : 'hidden'};
     height: 100vh;
     z-index: 2;
+    top: 44px;
     left: 0;
 
     background-image: linear-gradient(0deg, #0ea4c2 0%, #13cfb9 100%);

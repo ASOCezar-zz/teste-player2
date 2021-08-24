@@ -6,6 +6,7 @@ import './index.css';
 import { GlobalStyles } from './styles/global-styles';
 import { Login } from './Templates/Login';
 import { Home } from './Templates/Home';
+import { BankDetails } from './Templates/BankDetails';
 import { NotFound } from './components/NotFound';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
@@ -17,6 +18,7 @@ ReactDOM.render(
         <GlobalStyles />
         <BrowserRouter>
           <Switch>
+            <Route component={BankDetails} path="/:id" exact />
             <Route component={Login} path="/login" />
             <Route component={Home} exact path="/" />
             <Route component={NotFound} path="*" />

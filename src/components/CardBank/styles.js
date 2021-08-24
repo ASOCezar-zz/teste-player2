@@ -86,7 +86,7 @@ export const Container = styled.div`
             display: flex;
             flex-direction: row;
             bottom: 40px;
-            right: -75px;
+            right: -30px;
             background-color: ${theme.colors.white};
             border-radius: 6px;
             padding: 5px 0;
@@ -115,7 +115,7 @@ export const Container = styled.div`
                 content: '';
                 position: absolute;
                 top: 100%;
-                left: 50%;
+                left: 75%;
                 margin-left: -5px;
                 border-width: 5px;
                 border-style: solid;
@@ -127,6 +127,7 @@ export const Container = styled.div`
           :active {
             background-color: ${theme.colors.darkGray};
             outline: none;
+            user-select: none;
           }
         }
       }
