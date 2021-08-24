@@ -18,7 +18,7 @@ ReactDOM.render(
         <GlobalStyles />
         <BrowserRouter>
           <Switch>
-            <Route component={BankDetails} path="/:id" exact />
+            <Route component={BankDetails} path="/messages/:id" exact />
             <Route component={Login} path="/login" />
             <Route component={Home} exact path="/" />
             <Route component={NotFound} path="*" />

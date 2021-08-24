@@ -16,7 +16,7 @@ export const CardBank = ({ name, code = null, ispb }) => {
   const [openOptions, setOpenOptions] = useState(false);
 
   const handleRedirect = (code) => {
-    !!code && history.push(`/${code}`);
+    !!code && history.push(`/messages/${code}`);
   };
 
   return (

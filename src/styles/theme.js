@@ -9,5 +9,6 @@ export const theme = {
     green: '#0EC3A3',
     gray: '#6e778d',
     darkGray: '#ced4de',
+    error: '#ff403d',
   },
 };
