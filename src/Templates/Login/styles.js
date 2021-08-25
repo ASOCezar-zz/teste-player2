@@ -2,52 +2,108 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    width: 100%;
-    height: 100vh;
-    padding: 89px 24px 48px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 48px;
+    flex-direction: row;
+    height: 100vh;
 
-    .logo {
-      width: 107.19px;
-      height: 84px;
+    .image-section {
+      display: none;
+      visibility: hidden;
 
-      img {
-        width: 100%;
-        height: 100%;
+      ${theme.media.tablet} {
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(0deg, #0ea4c2 0%, #13cfb9 100%);
+        border-radius: 64px 0 0 0;
+        padding: 89px 5%;
+        min-width: 50%;
+
+        .imageSection-content {
+          display: flex;
+          flex-direction: column;
+          width: 100;
+          height: 100%;
+          gap: 40px;
+
+          .imageSection-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 8px;
+            .imageSection-title {
+              font-size: 30px;
+              line-height: 32px;
+              color: ${theme.colors.white};
+            }
+            .imageSection-description {
+              font-size: 14px;
+              line-height: 20px;
+              font-weight: 400;
+              color: ${theme.colors.white};
+            }
+          }
+        }
+      }
+
+      ${theme.media.desktop} {
+        padding: 89px 10%;
       }
     }
 
-    .login-title {
+    .form-section {
+      min-width: 50%;
+      padding: 89px 24px 48px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
+      gap: 48px;
 
-      h2 {
-        color: ${theme.colors.primaryFont};
-        font-size: 30px;
-        line-height: 32px;
+      ${theme.media.desktop} {
+        padding: 89px 10%;
       }
-    }
 
-    .register {
-      display: inline-block;
+      .logo {
+        width: 107.19px;
+        height: 84px;
 
-      .register-text {
-        font-size: 14px;
-        font-weight: 400;
-        color: ${theme.colors.gray};
-        line-height: 19px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
 
-        .registration-link {
-          text-decoration: none;
-          color: ${theme.colors.green};
-          font-weight: 700;
-          line-height: 20px;
+      .login-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h2 {
+          color: ${theme.colors.primaryFont};
+          font-size: 30px;
+          line-height: 32px;
+        }
+      }
+
+      .register {
+        display: inline-block;
+
+        .register-text {
+          font-size: 14px;
+          font-weight: 400;
+          color: ${theme.colors.gray};
+          line-height: 19px;
+
+          .registration-link {
+            text-decoration: none;
+            color: ${theme.colors.green};
+            font-weight: 700;
+            line-height: 20px;
+          }
         }
       }
     }
