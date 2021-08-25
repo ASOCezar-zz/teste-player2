@@ -38,7 +38,6 @@ export const FormLogin = () => {
     }).then(async (res) => {
       const data = await res.json();
       const token = data.token;
-      console.log('token: ' + token);
       nookies.set(null, 'USER_TOKEN', token, {
         path: '/',
         maxAge: 8640000 * 7,
@@ -56,7 +55,6 @@ export const FormLogin = () => {
       setIsPasswordInvalid(false);
     }
     if (validEmail && validPassword) {
-      console.log('passei aqui');
       authenticate();
       userContext.userDispatch({
         type: types.SET_USER_DATA,
