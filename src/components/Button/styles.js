@@ -5,7 +5,6 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     height: 43px;
-    cursor: pointer;
 
     button {
       width: 100%;
@@ -17,6 +16,15 @@ export const Container = styled.div`
       border: none;
       color: ${theme.colors.white};
       padding: 12px 24px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(14, 195, 163, 0.7);
+      }
+
+      &:active {
+        background-color: rgba(87, 180, 163, 1);
+      }
       p {
         font-size: 14px;
         font-style: normal;

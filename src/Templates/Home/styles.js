@@ -2,14 +2,14 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme, isFocused }) => css`
+    position: fixed;
     background-color: ${theme.colors.background};
-    box-sizing: border-box;
-    max-width: 100%;
+    width: 100%;
     height: 100vh;
-    overflow: hidden;
     padding-inline: 24px;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     ${theme.media.tablet} {
       padding-inline: 46px;
@@ -21,11 +21,19 @@ export const Container = styled.div`
 
     main {
       max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
       height: calc(100% - 80px);
       overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      ::-webkit-scrollbar {
+      width: 10px
+    }
+   
+    ::-webkit-scrollbar-thumb {   
+      background-color: ${({ theme }) => theme.colors.green};
+      border-radius: 8px;
+    }
       .section-title {
         margin-top: 24px;
         display: flex;
@@ -61,12 +69,6 @@ export const Container = styled.div`
 
           transition: border 0.2s linear;
 
-          :focus {
-            < .search {
-              border:  !important;
-            }
-          }
-
           ::placeholder {
             color: ${theme.colors.secondaryFont};
             font-family: 'Red Hat Display', sans-serif;
@@ -90,11 +92,13 @@ export const Container = styled.div`
       }
 
       .grid-banks {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-auto-rows: 140px;
-        gap: 12px;
-      }
+          max-width: 100%;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          grid-auto-rows: 160px;
+          gap: 12px;
+        }
+
     }
   `}
 `;

@@ -10,6 +10,15 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Red Hat Display', sans-serif;
+
+    ::-webkit-scrollbar {
+      width: 10px
+    } 
+   
+    ::-webkit-scrollbar-thumb {   
+      background-color: ${({ theme }) => theme.colors.green};
+      border-radius: 8px;
+    }
   }
 
   h2 {

@@ -1,5 +1,24 @@
 import styled, { css } from 'styled-components';
 
+const openedMenu = (isOpen) =>
+  isOpen
+    ? css`
+        width: 35%;
+
+        .content {
+          padding-inline: 90px;
+        }
+      `
+    : css`
+        width: 44px;
+
+        .content {
+          width: 100%;
+          padding: 0;
+          align-items: center;
+        }
+      `;
+
 export const Container = styled.div`
   ${({ theme, isOpen }) => css`
     position: fixed;
@@ -37,6 +56,21 @@ export const Container = styled.div`
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        transition: all 250ms linear;
+        cursor: pointer;
+
+        a {
+          :hover {
+            border: none;
+            box-shadow: none;
+          }
+        }
+
+        :hover {
+          transform: scale(1.02);
+          box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+          border-radius: 50px;
+        }
 
         img {
           cursor: pointer;
@@ -54,13 +88,35 @@ export const Container = styled.div`
         line-height: 20px;
         gap: 15px;
         align-items: center;
+        padding: 15px;
+        transition: all 250ms linear;
 
         cursor: pointer;
+
+        :hover {
+          transform: scale(1.02);
+          box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+          border-radius: 50px;
+        }
 
         img {
           width: 24px;
           height: 24px;
         }
+      }
+    }
+
+    ${theme.media.desktop} {
+      top: 80px;
+      left: 0;
+      visibility: visible;
+      height: 100%;
+      ${openedMenu(isOpen)}
+
+      .content {
+        position: absolute;
+        top: 200px;
+        gap: 50px;
       }
     }
   `}

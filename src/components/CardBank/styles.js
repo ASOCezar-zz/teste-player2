@@ -30,8 +30,7 @@ export const Container = styled.div`
     border-radius: 8px;
     box-shadow: 0px 4px 20px 0px rgba(71, 79, 99, 0.05);
     padding: 16px 20px 24px;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
     box-sizing: border-box;
 
     transition: all 0.3s linear;
@@ -151,6 +150,8 @@ export const Container = styled.div`
         flex-direction: column;
         gap: 5px;
         height: 40px;
+        user-select: none;
+        cursor: pointer;
 
         h4 {
           color: ${theme.colors.primaryFont};

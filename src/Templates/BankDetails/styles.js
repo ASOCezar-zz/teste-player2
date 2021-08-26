@@ -26,6 +26,15 @@ export const Container = styled.div`
       display: flex;
       flex-direction: column;
 
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.colors.green};
+        border-radius: 8px;
+      }
+
       .main-content {
         box-shadow: 0px 4px 20px rgba(71, 79, 99, 0.05);
         border-radius: 8px;

@@ -11,6 +11,7 @@ import attachmentIcon from '../../assets/icons/attachment-icon.svg';
 import { Header } from '../../components/Header';
 
 import messages from './dataDispatchs';
+import { NavBar } from '../../components/NavBar';
 
 export const BankDetails = (context) => {
   const history = useHistory();
@@ -34,12 +35,13 @@ export const BankDetails = (context) => {
   if (token) {
     return (
       <Styled.Container>
+        <NavBar />
         <Header
           pageTitle={
-            <div className="top-page">
+            <>
               <img src={backArrow} />
               <h3>{bank.name}</h3>
-            </div>
+            </>
           }
           handleClick={handleBackToHome}
         />

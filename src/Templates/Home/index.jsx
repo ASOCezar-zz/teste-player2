@@ -11,6 +11,7 @@ import clearIcon from '../../assets/icons/cleanField-icon.svg';
 import { useRef } from 'react';
 import { Header } from '../../components/Header';
 import { useHistory } from 'react-router';
+import { NavBar } from '../../components/NavBar';
 
 export const Home = (context) => {
   const [banks, setBanks] = useState([]);
@@ -46,6 +47,7 @@ export const Home = (context) => {
   if (token) {
     return (
       <Styled.Container isFocused={isFocused}>
+        <NavBar />
         <Header pageTitle={<h2>Bancos</h2>} />
         <main>
           <div className="section-title">

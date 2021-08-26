@@ -47,7 +47,7 @@ export const CardBank = ({ name, code = null, ispb }) => {
         <div className="img-content-card">
           <img src={icon} />
         </div>
-        <div className="txt-content-card">
+        <div className="txt-content-card" aria-label={name}>
           <h4>
             {name} - {code}
           </h4>

@@ -1,26 +1,21 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.header`
   ${({ theme }) => css`
     position: sticky;
-    inset: 0 0 0 24px;
-    width: 100%;
+    top: 0;
+    left: 0;
+    height: 44px;
+    margin-left: 44px;
     display: flex;
     flex-direction: row;
-    header {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      height: 44px;
-      gap: 24px;
-      top: 0;
-      left: 0;
-      background-color: ${theme.colors.background};
-      align-items: center;
-      justify-content: space-between;
-      z-index: 2;
-      flex-wrap: nowrap;
-      border-bottom: 1px solid ${theme.colors.secondaryFont};
+    gap: 24px;
+    background-color: ${theme.colors.background};
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid ${theme.colors.secondaryFont};
 
       .funcionalities {
         display: none;
@@ -28,12 +23,16 @@ export const Container = styled.div`
       }
 
       ${theme.media.desktop} {
-        padding: 18.5px;
+        margin-left: 0;
         height: 80px;
         .funcionalities {
           display: flex;
           visibility: visible;
           gap: 30px;
+
+          .notification-button {
+            cursor: pointer;
+          }
 
           .btn-profile {
             padding: 0;
@@ -45,6 +44,7 @@ export const Container = styled.div`
             gap: 11px;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
 
             p {
               font-size: 14px;
@@ -67,6 +67,7 @@ export const Container = styled.div`
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        user-select: none;
 
         img {
           cursor: pointer;

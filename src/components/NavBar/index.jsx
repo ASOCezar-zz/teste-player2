@@ -29,7 +29,12 @@ export const NavBar = () => {
           <img src={logoutIcon} />
         </div>
       </Styled.Container>
-      <NavigationLink isOpen={menuOpen} />
+      <NavigationLink
+        isOpen={menuOpen}
+        setIsOpen={setMenuOpen}
+        onMouseOver={() => setMenuOpen(true)}
+        onMouseLeave={() => setMenuOpen(false)}
+      />
     </>
   );
 };

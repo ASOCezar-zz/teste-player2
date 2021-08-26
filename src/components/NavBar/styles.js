@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  ${() => css`
+  ${({ theme }) => css`
     position: fixed;
     inset-inline: 0;
     width: 44px;
@@ -21,6 +21,10 @@ export const Container = styled.div`
     .options-logout {
       display: none;
       visibility: hidden;
+    }
+
+    ${theme.media.desktop} {
+      height: 80px;
     }
   `}
 `;
