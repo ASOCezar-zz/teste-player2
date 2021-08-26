@@ -10,16 +10,19 @@ const showOption = keyframes`
     bottom: 40px
   }
 `;
-const hideOption = keyframes`
-  from {
-    box-shadow: 0px 10px 15px 0px rgba(71, 79, 99, 0.15);
-    bottom: 40px
+
+const optionOpened = (openOptions) => {
+  if (openOptions) {
+    return css`
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      top: 0;
+      left: 0;
+    `;
   }
-  to {
-    box-shadow: 0px 0px 0px 0px rgba(71, 79, 99, 0.15);
-    bottom: 12px
-  }
-`;
+};
 
 export const Container = styled.div`
   ${({ theme, openOptions }) => css`
@@ -74,9 +77,14 @@ export const Container = styled.div`
         }
       }
 
+      .optionsBackground {
+        ${optionOpened(openOptions)}
+      }
+
       .options-card {
+        pointer-events: ${openOptions ? 'all' : 'auto'};
         .btn-options {
-          position: relative;
+          position: ${openOptions ? 'relative' : 'static'};
           border: none;
           background-color: transparent;
           cursor: pointer;
@@ -86,7 +94,7 @@ export const Container = styled.div`
             display: flex;
             flex-direction: row;
             bottom: 40px;
-            right: -30px;
+            right: -15px;
             background-color: ${theme.colors.white};
             border-radius: 6px;
             padding: 5px 0;
@@ -94,12 +102,10 @@ export const Container = styled.div`
             z-index: 3;
             width: 172px;
             height: 52px;
-            animation: ${openOptions ? showOption : hideOption} 250ms ease-in-out forwards;
+            animation: ${openOptions && showOption} 250ms ease-in-out forwards;
             visibility: ${openOptions ? 'visible' : 'hidden'};
 
             align-items: center;
-
-            transition: all 250ms ease-in-out;
 
             .tooltip-text {
               color: ${theme.colors.gray};
@@ -115,7 +121,7 @@ export const Container = styled.div`
                 content: '';
                 position: absolute;
                 top: 100%;
-                left: 75%;
+                left: 85%;
                 margin-left: -5px;
                 border-width: 5px;
                 border-style: solid;

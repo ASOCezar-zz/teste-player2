@@ -10,7 +10,7 @@ import arrowDown from '../../assets/icons/navlink/arrow-down.svg';
 
 export const NavigationLink = ({ isOpen }) => (
   <Styled.Container isOpen={isOpen}>
-    <div className="title-navlink">
+    <div className="navlink-title">
       <img src={logoNavlink} />
     </div>
     <div className="content">

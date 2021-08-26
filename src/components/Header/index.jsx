@@ -1,29 +1,36 @@
 import PropTypes from 'prop-types';
 
-import logoMenu from '../../assets/logos/logo-menu.svg';
-import { NavigationLink } from '../NavigationLink';
+import withNotificationIcon from '../../assets/icons/withNotification-icon.svg';
+import arrowDownIcon from '../../assets/icons/arrowDown-icon.svg';
+import { Button } from '../Button';
 
 import * as Styled from './styles';
+import { NavBar } from '../NavBar';
 
-export const Header = ({ menuOpen, setMenuOpen, pageTitle, handleClick = undefined }) => {
+export const Header = ({ pageTitle, handleClick = undefined }) => {
   return (
     <Styled.Container>
+      <NavBar />
       <header>
-        <button className="btn-open-menu" onClick={() => setMenuOpen(!menuOpen)}>
-          <img src={logoMenu} alt="botão do menu" />
-        </button>
         <div onClick={handleClick} className="page-title">
           <span>{pageTitle}</span>
         </div>
+        <div className="funcionalities">
+          <Button text="+ Criar Banco" />
+          <img src={withNotificationIcon} />
+          <button className="btn-profile">
+            <p>
+              Olá, <strong>Beleza Rara</strong>
+            </p>
+            <img src={arrowDownIcon} />
+          </button>
+        </div>
       </header>
-      <NavigationLink isOpen={menuOpen} />
     </Styled.Container>
   );
 };
 
 Header.propTypes = {
-  menuOpen: PropTypes.bool.isRequired,
-  setMenuOpen: PropTypes.func.isRequired,
   pageTitle: PropTypes.node.isRequired,
   handleClick: PropTypes.func,
 };

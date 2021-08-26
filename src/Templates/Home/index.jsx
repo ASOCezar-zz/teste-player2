@@ -14,9 +14,9 @@ import { useHistory } from 'react-router';
 
 export const Home = (context) => {
   const [banks, setBanks] = useState([]);
-  const [menuOpen, setMenuOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [searchBanks, setSearchBanks] = useState([]);
+  const [isFocused, setIsFocused] = useState(false);
   const history = useHistory();
 
   const cookies = nookies.get(context);
@@ -45,56 +45,56 @@ export const Home = (context) => {
 
   if (token) {
     return (
-      <>
-        <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} pageTitle={<h2>Bancos</h2>} />
-        <Styled.Container>
-          <main>
-            <div className="section-title">
-              <h3>Bancos </h3>
-              <h4>{banks.length} bancos</h4>
-            </div>
-            <div className="search">
-              <input
-                type="text"
-                name="search"
-                placeholder="Digite o nome do banco"
-                ref={searchField}
-                onChange={handleChange}
-              />
-              <button>
-                {searchValue ? (
-                  <img
-                    src={clearIcon}
-                    style={{ width: '14px', height: '14px', top: '17px' }}
-                    alt="limpar o campo de busca"
-                    onClick={clearField}
-                  />
-                ) : (
-                  <img src={searchIcon} alt="lupa para procurar por bancos" />
-                )}
-              </button>
-            </div>
-            {searchValue ? (
-              <>
-                <h2>Resultados para {searchValue}</h2>
-                <div className="grid-banks">
-                  <div className="grid-banks">
-                    {searchBanks.map((bank) => (
-                      <CardBank key={bank.ispb} name={bank.name} code={bank.code} ispb={bank.ispb} />
-                    ))}
-                  </div>
-                </div>
-              </>
-            ) : (
+      <Styled.Container isFocused={isFocused}>
+        <Header pageTitle={<h2>Bancos</h2>} />
+        <main>
+          <div className="section-title">
+            <h3>Bancos </h3>
+            <h4>{banks.length} bancos</h4>
+          </div>
+          <div className="search" id="search-input">
+            <input
+              type="text"
+              name="search"
+              placeholder="Digite o nome do banco"
+              ref={searchField}
+              onChange={handleChange}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
+            />
+            <button>
+              {searchValue ? (
+                <img
+                  src={clearIcon}
+                  style={{ width: '14px', height: '14px', top: '17px' }}
+                  alt="limpar o campo de busca"
+                  onClick={clearField}
+                />
+              ) : (
+                <img src={searchIcon} alt="lupa para procurar por bancos" />
+              )}
+            </button>
+          </div>
+          {searchValue ? (
+            <>
+              <h2>Resultados para {searchValue}</h2>
               <div className="grid-banks">
-                {banks.map((bank) => (
-                  <CardBank key={bank.ispb} name={bank.name} code={bank.code} ispb={bank.ispb} />
-                ))}
+                <div className="grid-banks">
+                  {searchBanks.map((bank) => (
+                    <CardBank key={bank.ispb} name={bank.name} code={bank.code} ispb={bank.ispb} />
+                  ))}
+                </div>
               </div>
-            )}
-          </main>
-        </Styled.Container>
-      </>
+            </>
+          ) : (
+            <div className="grid-banks">
+              {banks.map((bank) => (
+                <CardBank key={bank.ispb} name={bank.name} code={bank.code} ispb={bank.ispb} />
+              ))}
+            </div>
+          )}
+        </main>
+      </Styled.Container>
     );
   } else {
     history.push('/login');

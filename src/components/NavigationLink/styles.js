@@ -2,14 +2,14 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme, isOpen }) => css`
-    position: absolute;
+    position: fixed;
     width: ${isOpen ? '100%' : '0'};
+    box-sizing: border-box;
     visibility: ${isOpen ? 'visible' : 'hidden'};
     height: 100vh;
-    z-index: 2;
     top: 44px;
     left: 0;
-
+    z-index: 4;
     background-image: linear-gradient(0deg, #0ea4c2 0%, #13cfb9 100%);
 
     display: flex;
@@ -18,7 +18,7 @@ export const Container = styled.div`
 
     transition: all 250ms ease-in;
 
-    .title-navlink {
+    .navlink-title {
       position: relative;
       inset-block-start: 24px;
     }

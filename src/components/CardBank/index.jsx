@@ -30,8 +30,9 @@ export const CardBank = ({ name, code = null, ispb }) => {
           <img src={connections} />
           <span>23</span>
         </div>
-        <div className="options-card">
-          <button className="btn-options" onClick={() => setOpenOptions(!openOptions)}>
+        {openOptions && <div className="optionsBackground" onClick={() => setOpenOptions(false)} />}
+        <div className="options-card" onClick={() => setOpenOptions(!openOptions)}>
+          <button className="btn-options">
             <div className="tooltip">
               <div className="tooltip-text">
                 <img src={deleteIcon} />

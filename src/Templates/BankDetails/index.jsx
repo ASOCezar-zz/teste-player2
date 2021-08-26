@@ -17,7 +17,6 @@ export const BankDetails = (context) => {
   const { id } = useParams();
 
   const [bank, setBank] = useState([]);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const cookies = nookies.get(context);
   const token = cookies.USER_TOKEN;
@@ -34,10 +33,8 @@ export const BankDetails = (context) => {
 
   if (token) {
     return (
-      <>
+      <Styled.Container>
         <Header
-          menuOpen={menuOpen}
-          setMenuOpen={setMenuOpen}
           pageTitle={
             <div className="top-page">
               <img src={backArrow} />
@@ -46,8 +43,8 @@ export const BankDetails = (context) => {
           }
           handleClick={handleBackToHome}
         />
-        <Styled.Container>
-          <main>
+        <main>
+          <div className="main-content">
             <div className="bank-details">
               <h3 className="header-title">Detalhes do Banco</h3>
               <h4 className="section-title">{bank.fullName}</h4>
@@ -75,9 +72,9 @@ export const BankDetails = (context) => {
                 </div>
               ))}
             </div>
-          </main>
-        </Styled.Container>
-      </>
+          </div>
+        </main>
+      </Styled.Container>
     );
   } else {
     history.push('/login');
