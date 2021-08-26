@@ -12,12 +12,14 @@ import { useRef } from 'react';
 import { Header } from '../../components/Header';
 import { useHistory } from 'react-router';
 import { NavBar } from '../../components/NavBar';
+import { Loading } from '../../components/Loading';
 
 export const Home = (context) => {
   const [banks, setBanks] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [searchBanks, setSearchBanks] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
   const cookies = nookies.get(context);
@@ -26,9 +28,11 @@ export const Home = (context) => {
   const searchField = useRef();
 
   useEffect(() => {
+    setIsLoading(true);
     fetch('https://brasilapi.com.br/api/banks/v1')
       .then((res) => res.json())
-      .then((res) => setBanks(res));
+      .then((res) => setBanks(res))
+      .then(() => setIsLoading(false));
   }, []);
 
   const handleChange = (e) => {
@@ -52,7 +56,7 @@ export const Home = (context) => {
         <main>
           <div className="section-title">
             <h3>Bancos </h3>
-            <h4>{banks.length} bancos</h4>
+            <h4>{isLoading ? 'Carregando ...' : banks.length + ' bancos'}</h4>
           </div>
           <div className="search" id="search-input">
             <input
@@ -77,7 +81,11 @@ export const Home = (context) => {
               )}
             </button>
           </div>
-          {searchValue ? (
+          {isLoading ? (
+            <div className="loading">
+              <Loading />
+            </div>
+          ) : searchValue ? (
             <>
               <h2>Resultados para {searchValue}</h2>
               <div className="grid-banks">

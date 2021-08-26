@@ -15,6 +15,8 @@ export const CardBank = ({ name, code = null, ispb }) => {
 
   const [openOptions, setOpenOptions] = useState(false);
 
+  const handleDeleteBank = () => {};
+
   const handleRedirect = (code) => {
     !!code && history.push(`/messages/${code}/#`);
   };
@@ -33,7 +35,7 @@ export const CardBank = ({ name, code = null, ispb }) => {
         {openOptions && <div className="optionsBackground" onClick={() => setOpenOptions(false)} />}
         <div className="options-card" onClick={() => setOpenOptions(!openOptions)}>
           <button className="btn-options">
-            <div className="tooltip">
+            <div className="tooltip" onClick={handleDeleteBank}>
               <div className="tooltip-text">
                 <img src={deleteIcon} />
                 <p>Deletar Banco</p>
