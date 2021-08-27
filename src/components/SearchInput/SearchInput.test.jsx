@@ -47,4 +47,12 @@ describe('<SearchInput />', () => {
     userEvent.click(screen.getByAltText('limpar o campo de busca'));
     expect(container.firstChild).toHaveStyle({ border: `1px solid ${theme.colors.darkGray}` });
   });
+
+  it('Should match with snapshot', () => {
+    const { container } = renderTheme(
+      <SearchInput reference={undefined} clearField={fn} handleChange={fn2} searchValue="sas" />,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
 });

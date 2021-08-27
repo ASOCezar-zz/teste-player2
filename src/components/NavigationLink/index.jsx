@@ -14,7 +14,7 @@ export const NavigationLink = ({ isOpen, onMouseOver, onMouseLeave }) => (
   <Styled.Container isOpen={isOpen} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} aria-label="menu lateral">
     {isOpen ? (
       <>
-        <div className="navlink-title">
+        <div className="navlink-title" aria-label="menu lateral aberto">
           <img src={logoNavlink} />
         </div>
         <div className="content">
@@ -33,7 +33,7 @@ export const NavigationLink = ({ isOpen, onMouseOver, onMouseLeave }) => (
       </>
     ) : (
       <>
-        <div className="content">
+        <div className="content" aria-label="menu lateral fechado">
           <a href="#">
             <img src={homeIcon} />
           </a>

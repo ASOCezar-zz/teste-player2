@@ -107,6 +107,7 @@ exports[`<NavigationLink /> Should render a navigation link and observes mouse e
     class="c0"
   >
     <div
+      aria-label="menu lateral fechado"
       class="content"
     >
       <a

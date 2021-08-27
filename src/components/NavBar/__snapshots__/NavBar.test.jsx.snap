@@ -171,6 +171,7 @@ exports[`<NavBar /> Should match with a snapshot 1`] = `
     class="c1"
   >
     <div
+      aria-label="menu lateral fechado"
       class="content"
     >
       <a

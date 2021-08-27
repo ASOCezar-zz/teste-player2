@@ -6,6 +6,8 @@ import data from './mock';
 const fn = jest.fn();
 const fn2 = jest.fn();
 
+const dataWithoutCode = { ispb: '000000', name: 'Teste', fullName: 'Teste Banco' };
+
 describe('<CardBank />', () => {
   it('Should render a card with bank infos', () => {
     renderTheme(<CardBank {...data} handleDeleteBank={fn} handleRedirect={fn2} />);
@@ -13,9 +15,7 @@ describe('<CardBank />', () => {
   });
 
   it('Should render a card without bank code', () => {
-    renderTheme(
-      <CardBank {...data} code={null} banks={[]} setBanks={undefined} searchBanks={[]} setSearchBanks={undefined} />,
-    );
+    renderTheme(<CardBank {...dataWithoutCode} handleDeleteBank={fn} handleRedirect={fn2} />);
     expect(screen.getByRole('heading', { name: data.name + ' -' })).toBeInTheDocument;
   });
 
