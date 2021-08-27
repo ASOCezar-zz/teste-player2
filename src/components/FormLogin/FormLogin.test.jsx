@@ -78,4 +78,9 @@ describe('<FormLogin />', () => {
     });
     expect(fn).toBeCalledTimes(1);
   });
+
+  it('Shoul match with snapshot', () => {
+    const { container } = renderTheme(<FormLogin authenticate={fn} />);
+    expect(container).toMatchSnapshot();
+  });
 });
