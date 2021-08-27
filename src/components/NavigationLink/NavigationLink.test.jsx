@@ -1,4 +1,3 @@
-import { screen } from '@testing-library/react';
 import { NavigationLink } from '.';
 import { renderTheme } from '../../styles/renderTheme';
 

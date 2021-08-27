@@ -13,14 +13,16 @@ export const Header = ({ pageTitle, handleClick = undefined }) => {
   return (
     <Styled.Container>
       <div onClick={handleClick} className="page-title">
-        <div className="top-page">{pageTitle}</div>
+        <div className="top-page">
+          <h2>{pageTitle}</h2>
+        </div>
       </div>
       <div className="funcionalities">
         <Button text="+ Criar Banco" />
         {notifications.length > 0 ? (
-          <img src={withNotificationIcon} className="notification-button" />
+          <img src={withNotificationIcon} className="notification-button" alt="icone com notificações" />
         ) : (
-          <img src={withoutNotificationIcon} className="notification-button" />
+          <img src={withoutNotificationIcon} className="notification-button" alt="icone sem notificações" />
         )}
 
         <button className="btn-profile">

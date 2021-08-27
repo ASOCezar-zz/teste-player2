@@ -1,0 +1,251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Should match with a snapshot 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 43px;
+}
+
+.c1 button {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #0EC3A3;
+  border: none;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.c1 button:hover {
+  background-color: rgba(14,195,163,0.7);
+}
+
+.c1 button:active {
+  background-color: rgba(87,180,163,1);
+}
+
+.c1 button p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.c0 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 44px;
+  margin-left: 44px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 24px;
+  background-color: #f7f7f8;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  z-index: 2;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #b3b9c9;
+}
+
+.c0 .funcionalities {
+  display: none;
+  visibility: hidden;
+}
+
+.c0 .top-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 .top-page img {
+  cursor: pointer;
+}
+
+.c0 .top-page h3 {
+  color: #b3b9c9;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  white-space: nowrap;
+}
+
+.c0 .page-title {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    margin-left: 0;
+    height: 80px;
+  }
+
+  .c0 .funcionalities {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+    gap: 30px;
+  }
+
+  .c0 .funcionalities .notification-button {
+    cursor: pointer;
+  }
+
+  .c0 .funcionalities .btn-profile {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    background-color: transparent;
+    border: none;
+    gap: 11px;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .c0 .funcionalities .btn-profile p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #6e778d;
+  }
+
+  .c0 .funcionalities .btn-profile p strong {
+    font-weight: 700;
+    line-height: 19px;
+    color: #0EC3A3;
+  }
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <div
+      class="page-title"
+    >
+      <div
+        class="top-page"
+      >
+        <h2>
+          Teste
+        </h2>
+      </div>
+    </div>
+    <div
+      class="funcionalities"
+    >
+      <div
+        class="c1"
+      >
+        <button>
+          <img
+            src=""
+          />
+          <p>
+            + Criar Banco
+          </p>
+        </button>
+      </div>
+      <img
+        alt="icone sem notificações"
+        class="notification-button"
+        src="withoutNotification-icon.svg"
+      />
+      <button
+        class="btn-profile"
+      >
+        <p>
+          Olá, 
+          <strong>
+            Beleza Rara
+          </strong>
+        </p>
+        <img
+          src="arrowDown-icon.svg"
+        />
+      </button>
+    </div>
+  </header>
+</div>
+`;
