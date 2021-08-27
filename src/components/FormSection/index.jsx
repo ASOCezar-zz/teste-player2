@@ -8,7 +8,7 @@ import loginLogo from '../../assets/logos/login-logo.svg';
 export const FormSection = ({ authenticate }) => (
   <Styled.Container>
     <div className="logo">
-      <img src={loginLogo} />
+      <img src={loginLogo} aria-label="logo da informe-se" />
     </div>
     <div className="login-title">
       <h2>Dispare mensagens quando e para quem você quiser.</h2>
