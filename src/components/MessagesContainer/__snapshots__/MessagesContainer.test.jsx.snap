@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessagesContainer /> Should render some messages 1`] = `
+.c0 {
+  padding-block-start: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.c1 .message-title {
+  font-size: 12px;
+  line-height: 16px;
+  color: #3b3f49;
+}
+
+.c1 .message-text {
+  color: #474f63;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.c1 .message-attachment {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 6.25px;
+}
+
+.c1 .message-attachment p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #6e778d;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h5
+        class="message-title"
+      >
+        Mensagem 1
+      </h5>
+      <p
+        class="message-text"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat pellentesque eleifend donec urna. Morbi at vulputate dictumst nullam at sit. Sed orci, pretium, dolor volutpat mattis accumsan, ornare. Ut diam sem magna ultricies. Nibh pulvinar eget risus risus, sed faucibus in in ac. Enim suspendisse id lobortis euismod fringilla odio. Non in facilisis tortor tellus fringilla in interdum. Magna volutpat justo, pharetra adipiscing mauris sagittis, pellentesque diam. Vestibulum, aenean eu consectetur rhoncus scelerisque at nisl, purus. Sapien tellus consequat ac ornare. Amet, tortor odio velit libero, commodo sagittis cras.
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <h5
+        class="message-title"
+      >
+        Mensagem 2
+      </h5>
+      <p
+        class="message-text"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat pellentesque eleifend donec urna. Morbi at vulputate dictumst nullam at sit. Sed orci, pretium, dolor volutpat mattis accumsan, ornare. Ut diam sem magna ultricies. Nibh pulvinar eget risus risus, sed faucibus in in ac. Enim suspendisse id lobortis euismod fringilla odio. Non in facilisis tortor tellus fringilla in interdum. Magna volutpat justo, pharetra adipiscing mauris sagittis, pellentesque diam. Vestibulum, aenean eu consectetur rhoncus scelerisque at nisl, purus. Sapien tellus consequat ac ornare. Amet, tortor odio velit libero, commodo sagittis cras.
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <h5
+        class="message-title"
+      >
+        Mensagem 3
+      </h5>
+      <p
+        class="message-text"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat pellentesque eleifend donec urna. Morbi at vulputate dictumst nullam at sit. Sed orci, pretium, dolor volutpat mattis accumsan, ornare. Ut diam sem magna ultricies. Nibh pulvinar eget risus risus, sed faucibus in in ac. Enim suspendisse id lobortis euismod fringilla odio. Non in facilisis tortor tellus fringilla in interdum. Magna volutpat justo, pharetra adipiscing mauris sagittis, pellentesque diam. Vestibulum, aenean eu consectetur rhoncus scelerisque at nisl, purus. Sapien tellus consequat ac ornare. Amet, tortor odio velit libero, commodo sagittis cras.
+      </p>
+      <div
+        class="message-attachment"
+      >
+        <img
+          src="attachment-icon.svg"
+        />
+        <p>
+          .png
+           - 
+          48kB
+        </p>
+      </div>
+    </div>
+    <div
+      class="c1"
+    >
+      <h5
+        class="message-title"
+      >
+        Mensagem 4
+      </h5>
+      <p
+        class="message-text"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat pellentesque eleifend donec urna. Morbi at vulputate dictumst nullam at sit. Sed orci, pretium, dolor volutpat mattis accumsan, ornare. Ut diam sem magna ultricies. Nibh pulvinar eget risus risus, sed faucibus in in ac. Enim suspendisse id lobortis euismod fringilla odio. Non in facilisis tortor tellus fringilla in interdum. Magna volutpat justo, pharetra adipiscing mauris sagittis, pellentesque diam. Vestibulum, aenean eu consectetur rhoncus scelerisque at nisl, purus. Sapien tellus consequat ac ornare. Amet, tortor odio velit libero, commodo sagittis cras.
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <h5
+        class="message-title"
+      >
+        Mensagem 5
+      </h5>
+      <p
+        class="message-text"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat pellentesque eleifend donec urna. Morbi at vulputate dictumst nullam at sit. Sed orci, pretium, dolor volutpat mattis accumsan, ornare. Ut diam sem magna ultricies. Nibh pulvinar eget risus risus, sed faucibus in in ac. Enim suspendisse id lobortis euismod fringilla odio. Non in facilisis tortor tellus fringilla in interdum. Magna volutpat justo, pharetra adipiscing mauris sagittis, pellentesque diam. Vestibulum, aenean eu consectetur rhoncus scelerisque at nisl, purus. Sapien tellus consequat ac ornare. Amet, tortor odio velit libero, commodo sagittis cras.
+      </p>
+    </div>
+    <div
+      class="c1"
+    >
+      <h5
+        class="message-title"
+      >
+        Mensagem 6
+      </h5>
+      <p
+        class="message-text"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat pellentesque eleifend donec urna. Morbi at vulputate dictumst nullam at sit. Sed orci, pretium, dolor volutpat mattis accumsan, ornare. Ut diam sem magna ultricies. Nibh pulvinar eget risus risus, sed faucibus in in ac. Enim suspendisse id lobortis euismod fringilla odio. Non in facilisis tortor tellus fringilla in interdum. Magna volutpat justo, pharetra adipiscing mauris sagittis, pellentesque diam. Vestibulum, aenean eu consectetur rhoncus scelerisque at nisl, purus. Sapien tellus consequat ac ornare. Amet, tortor odio velit libero, commodo sagittis cras.
+      </p>
+    </div>
+  </div>
+</div>
+`;
