@@ -1,21 +1,16 @@
-import { UserContext } from '../../contexts/UserProvider/context';
-import * as types from '../../contexts/UserProvider/types';
-import nookies from 'nookies';
-import { useContext } from 'react';
-import { useHistory } from 'react-router';
 import { useState } from 'react';
 import { useRef } from 'react';
+import PropTypes from 'prop-types';
 
 import iconError from '../../assets/icons/errorField-icon.svg';
 
 import * as Styled from './styles';
 
-export const FormLogin = () => {
-  const userContext = useContext(UserContext);
-  const history = useHistory();
-
+export const FormLogin = ({ authenticate }) => {
   const emailInput = useRef();
   const passwordInput = useRef();
+
+  console.log(authenticate);
 
   const [emailValue, setEmailValue] = useState('');
   const [passwordValue, setPasswordValue] = useState('');
@@ -29,23 +24,6 @@ export const FormLogin = () => {
 
   const validPassword = passwordValue.length >= 6;
 
-  function authenticate() {
-    fetch('https://alurakut.vercel.app/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }).then(async (res) => {
-      const data = await res.json();
-      const token = data.token;
-      nookies.set(null, 'USER_TOKEN', token, {
-        path: '/',
-        maxAge: 8640000 * 7,
-      });
-      history.push('/');
-    });
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validEmail) {
@@ -55,23 +33,23 @@ export const FormLogin = () => {
       setIsPasswordInvalid(false);
     }
     if (validEmail && validPassword) {
-      authenticate();
-      userContext.userDispatch({
-        type: types.SET_USER_DATA,
-        payload: { email: emailValue.current?.value, password: passwordValue.current?.value },
-      });
+      const email = emailValue.current?.value;
+      const password = passwordValue.current?.value;
+      authenticate(email, password);
     } else if (!validEmail) {
       setIsEmailInvalid(true);
-    } else if (!validPassword) {
+    } else {
       setIsPasswordInvalid(true);
     }
   };
 
   return (
     <Styled.Container isEmailInvalid={isEmailInvalid} isPasswordInvalid={isPasswordInvalid}>
-      <form>
+      <form aria-label="formulário de login">
         <div className="form-group">
-          <label className="field-label">Email</label>
+          <label className="field-label" htmlFor="email">
+            Email
+          </label>
           <input
             autoComplete="off"
             ref={emailInput}
@@ -97,7 +75,7 @@ export const FormLogin = () => {
             value={passwordValue}
             onChange={(e) => setPasswordValue(e.target.value)}
             type="password"
-            name="password"
+            name="senha"
             id="password"
             placeholder="Senha"
             required={true}
@@ -115,4 +93,8 @@ export const FormLogin = () => {
       </form>
     </Styled.Container>
   );
+};
+
+FormLogin.propTypes = {
+  authenticate: PropTypes.func.isRequired,
 };

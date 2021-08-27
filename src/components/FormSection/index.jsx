@@ -1,9 +1,11 @@
 import * as Styled from './styles';
 
+import PropTypes from 'prop-types';
+
 import { FormLogin } from '../FormLogin';
 import loginLogo from '../../assets/logos/login-logo.svg';
 
-export const FormSection = () => (
+export const FormSection = ({ authenticate }) => (
   <Styled.Container>
     <div className="logo">
       <img src={loginLogo} />
@@ -11,7 +13,7 @@ export const FormSection = () => (
     <div className="login-title">
       <h2>Dispare mensagens quando e para quem você quiser.</h2>
     </div>
-    <FormLogin />
+    <FormLogin authenticate={authenticate} />
     <div className="register">
       <span className="register-text">
         Não tem uma conta? &nbsp;
@@ -25,3 +27,7 @@ export const FormSection = () => (
     </footer>
   </Styled.Container>
 );
+
+FormSection.propTypes = {
+  authenticate: PropTypes.func.isRequired,
+};
