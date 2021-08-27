@@ -14,6 +14,8 @@ const openingOption = keyframes`
 const openedOptions = (openList) =>
   openList
     ? css`
+        display: flex;
+        flex-direction: column;
         width: 100%;
         perspective: 1000px;
         .drop-item {
@@ -99,6 +101,7 @@ export const Container = styled.div`
     }
 
     .options {
+      display: none;
       list-style: none;
       ${openedOptions(openList)}
     }

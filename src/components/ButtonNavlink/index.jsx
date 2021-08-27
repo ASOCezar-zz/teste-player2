@@ -12,15 +12,15 @@ export const ButtonNavlink = ({ image = '', text, textOption1, textOption2 }) =>
     <Styled.Container openList={openList} onClick={() => setOpenList(!openList)}>
       <div className="btn-container">
         <button className="see-more">
-          <img src={image} />
+          <img src={image} aria-label={image} />
           <span>{text}</span>
         </button>
         <div>
-          <img src={arrowDown} />
+          <img src={arrowDown} aria-label="seta para baixo" />
         </div>
       </div>
-      <ul className="options">
-        <li className="drop-item">
+      <ul className="options" id="options-list" aria-label={'opções para ' + text}>
+        <li className="drop-item" aria-labelledby="options">
           <a href="#">{textOption1}</a>
         </li>
         <li className="drop-item">
