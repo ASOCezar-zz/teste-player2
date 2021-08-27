@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CardBank /> Should match with a snapshot 1`] = `
+exports[`<GridBanks /> Should match with a snapshot 1`] = `
 .c0 {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-auto-rows: 160px;
+  gap: 12px;
+}
+
+.c1 {
   background-color: #FFFFFF;
   border-radius: 8px;
   box-shadow: 0px 4px 20px 0px rgba(71,79,99,0.05);
@@ -12,15 +20,15 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   transition: all 0.3s linear;
 }
 
-.c0:hover {
+.c1:hover {
   background-color: rgba(237,239,242,1);
 }
 
-.c0:active {
+.c1:active {
   background-color: rgba(228,231,236,1);
 }
 
-.c0 .head-card {
+.c1 .head-card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,7 +47,7 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c0 .head-card .dispatching-card {
+.c1 .head-card .dispatching-card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,13 +63,13 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   cursor: pointer;
 }
 
-.c0 .head-card .dispatching-card label {
+.c1 .head-card .dispatching-card label {
   color: #117df9;
   font-size: 12px;
   font-weight: 500;
 }
 
-.c0 .head-card .profiles-card {
+.c1 .head-card .profiles-card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,24 +85,24 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   cursor: pointer;
 }
 
-.c0 .head-card .profiles-card span {
+.c1 .head-card .profiles-card span {
   color: #b3b9c9;
   font-size: 14px;
   font-weight: 500;
 }
 
-.c0 .head-card .options-card {
+.c1 .head-card .options-card {
   pointer-events: auto;
 }
 
-.c0 .head-card .options-card .btn-options {
+.c1 .head-card .options-card .btn-options {
   position: static;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
-.c0 .head-card .options-card .btn-options .tooltip {
+.c1 .head-card .options-card .btn-options .tooltip {
   position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
@@ -121,7 +129,7 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   align-items: center;
 }
 
-.c0 .head-card .options-card .btn-options .tooltip .tooltip-text {
+.c1 .head-card .options-card .btn-options .tooltip .tooltip-text {
   color: #6e778d;
   display: -webkit-box;
   display: -webkit-flex;
@@ -142,7 +150,7 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   padding: 8px 40px 8px 14px;
 }
 
-.c0 .head-card .options-card .btn-options .tooltip .tooltip-text::after {
+.c1 .head-card .options-card .btn-options .tooltip .tooltip-text::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -153,7 +161,7 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   border-color: #FFFFFF transparent transparent transparent;
 }
 
-.c0 .head-card .options-card .btn-options:active {
+.c1 .head-card .options-card .btn-options:active {
   background-color: #ced4de;
   outline: none;
   -webkit-user-select: none;
@@ -162,7 +170,7 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   user-select: none;
 }
 
-.c0 .content-card {
+.c1 .content-card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -178,7 +186,7 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   align-items: center;
 }
 
-.c0 .content-card .txt-content-card {
+.c1 .content-card .txt-content-card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,14 +203,16 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
   cursor: pointer;
 }
 
-.c0 .content-card .txt-content-card h4 {
+.c1 .content-card .txt-content-card h4 {
   color: #474f63;
 }
 
-<div>
+<div
+  class="c0"
+>
   <div
     aria-label="card com informações do banco"
-    class="c0"
+    class="c1"
   >
     <div
       class="head-card"
@@ -276,6 +286,85 @@ exports[`<CardBank /> Should match with a snapshot 1`] = `
         <h4>
           ISPB: 
           000000
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-label="card com informações do banco"
+    class="c1"
+  >
+    <div
+      class="head-card"
+    >
+      <div
+        class="dispatching-card"
+      >
+        <label>
+          Disparando agora ...
+        </label>
+        <img
+          src="arrow_right.svg"
+        />
+      </div>
+      <div
+        class="profiles-card"
+      >
+        <img
+          src="connections.svg"
+        />
+        <span>
+          23
+        </span>
+      </div>
+      <div
+        aria-label="opções para o card"
+        class="options-card"
+      >
+        <button
+          class="btn-options"
+        >
+          <div
+            class="tooltip"
+          >
+            <div
+              class="tooltip-text"
+            >
+              <img
+                src="delete-icon.svg"
+              />
+              <p>
+                Deletar Banco
+              </p>
+            </div>
+          </div>
+          <img
+            src="options.svg"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="content-card"
+    >
+      <div
+        class="img-content-card"
+      >
+        <img
+          src="main.svg"
+        />
+      </div>
+      <div
+        aria-label="Teste2"
+        class="txt-content-card"
+      >
+        <h4>
+          Teste2
+           - 
+        </h4>
+        <h4>
+          ISPB: 
+          000001
         </h4>
       </div>
     </div>

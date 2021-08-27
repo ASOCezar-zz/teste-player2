@@ -13,7 +13,7 @@ export const CardBank = ({ name, code = null, ispb, handleDeleteBank, handleRedi
   const [openOptions, setOpenOptions] = useState(false);
 
   return (
-    <Styled.Container openOptions={openOptions}>
+    <Styled.Container openOptions={openOptions} aria-label="card com informações do banco">
       <div className="head-card">
         <div className="dispatching-card">
           <label>Disparando agora ...</label>
