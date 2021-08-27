@@ -4,7 +4,7 @@ import { renderTheme } from '../../styles/renderTheme';
 
 describe('<Button />', () => {
   it('Should render a deafault button', () => {
-    renderTheme(<Button text="button">children</Button>);
+    renderTheme(<Button text="button" />);
     expect(screen.getByRole('button')).toBeInTheDocument;
 
     expect(screen.getByRole('button')).toMatchInlineSnapshot(`

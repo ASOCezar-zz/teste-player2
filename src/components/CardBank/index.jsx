@@ -8,21 +8,9 @@ import icon from '../../assets/cards_imgs/main.svg';
 import deleteIcon from '../../assets/icons/delete-icon.svg';
 
 import { useState } from 'react';
-import { useHistory } from 'react-router';
 
-export const CardBank = ({ name, code = null, ispb, banks, setBanks, searchBanks, setSearchBanks }) => {
-  const history = useHistory();
-
+export const CardBank = ({ name, code = null, ispb, handleDeleteBank, handleRedirect }) => {
   const [openOptions, setOpenOptions] = useState(false);
-
-  const handleRedirect = (code) => {
-    !!code && history.push(`/messages/${code}/#`);
-  };
-
-  const handleDeleteBank = (ispb) => {
-    setBanks(banks.filter((bank) => bank.ispb !== ispb));
-    setSearchBanks(searchBanks.filter((bank) => bank.ispb !== ispb));
-  };
 
   return (
     <Styled.Container openOptions={openOptions}>
@@ -36,7 +24,7 @@ export const CardBank = ({ name, code = null, ispb, banks, setBanks, searchBanks
           <span>23</span>
         </div>
         {openOptions && <div className="optionsBackground" onClick={() => setOpenOptions(false)} />}
-        <div className="options-card" onClick={() => setOpenOptions(!openOptions)}>
+        <div className="options-card" onClick={() => setOpenOptions(!openOptions)} aria-label="opções para o card">
           <button className="btn-options">
             <div className="tooltip" onClick={() => handleDeleteBank(ispb)}>
               <div className="tooltip-text">
@@ -67,8 +55,6 @@ CardBank.propTypes = {
   name: PropTypes.string.isRequired,
   code: PropTypes.number,
   ispb: PropTypes.string.isRequired,
-  banks: PropTypes.array.isRequired,
-  setBanks: PropTypes.func.isRequired,
-  searchBanks: PropTypes.array.isRequired,
-  setSearchBanks: PropTypes.func.isRequired,
+  handleDeleteBank: PropTypes.func.isRequired,
+  handleRedirect: PropTypes.func.isRequired,
 };

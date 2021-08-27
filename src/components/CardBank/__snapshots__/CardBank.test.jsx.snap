@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardBank /> Should match with a snapshot 1`] = `
+.c0 {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px 0px rgba(71,79,99,0.05);
+  padding: 16px 20px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.c0:hover {
+  background-color: rgba(237,239,242,1);
+}
+
+.c0:active {
+  background-color: rgba(228,231,236,1);
+}
+
+.c0 .head-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c0 .head-card .dispatching-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.c0 .head-card .dispatching-card label {
+  color: #117df9;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.c0 .head-card .profiles-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.c0 .head-card .profiles-card span {
+  color: #b3b9c9;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.c0 .head-card .options-card {
+  pointer-events: auto;
+}
+
+.c0 .head-card .options-card .btn-options {
+  position: static;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.c0 .head-card .options-card .btn-options .tooltip {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  bottom: 40px;
+  right: -15px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  padding: 5px 0;
+  text-align: center;
+  z-index: 3;
+  width: 172px;
+  height: 52px;
+  -webkit-animation: 250ms ease-in-out forwards;
+  animation: 250ms ease-in-out forwards;
+  visibility: hidden;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 .head-card .options-card .btn-options .tooltip .tooltip-text {
+  color: #6e778d;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 40px 8px 14px;
+}
+
+.c0 .head-card .options-card .btn-options .tooltip .tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 85%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #FFFFFF transparent transparent transparent;
+}
+
+.c0 .head-card .options-card .btn-options:active {
+  background-color: #ced4de;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 .content-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 12px;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 .content-card .txt-content-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 5px;
+  height: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c0 .content-card .txt-content-card h4 {
+  color: #474f63;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="head-card"
+    >
+      <div
+        class="dispatching-card"
+      >
+        <label>
+          Disparando agora ...
+        </label>
+        <img
+          src="arrow_right.svg"
+        />
+      </div>
+      <div
+        class="profiles-card"
+      >
+        <img
+          src="connections.svg"
+        />
+        <span>
+          23
+        </span>
+      </div>
+      <div
+        aria-label="opções para o card"
+        class="options-card"
+      >
+        <button
+          class="btn-options"
+        >
+          <div
+            class="tooltip"
+          >
+            <div
+              class="tooltip-text"
+            >
+              <img
+                src="delete-icon.svg"
+              />
+              <p>
+                Deletar Banco
+              </p>
+            </div>
+          </div>
+          <img
+            src="options.svg"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="content-card"
+    >
+      <div
+        class="img-content-card"
+      >
+        <img
+          src="main.svg"
+        />
+      </div>
+      <div
+        aria-label="Teste"
+        class="txt-content-card"
+      >
+        <h4>
+          Teste
+           - 
+          1
+        </h4>
+        <h4>
+          ISPB: 
+          000000
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;

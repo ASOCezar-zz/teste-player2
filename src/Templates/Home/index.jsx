@@ -39,6 +39,15 @@ export const Home = (context) => {
       .catch((err) => console.error(err.message));
   }, []);
 
+  const handleDeleteBank = (ispb) => {
+    setBanks(banks.filter((bank) => bank.ispb !== ispb));
+    setSearchBanks(searchBanks.filter((bank) => bank.ispb !== ispb));
+  };
+
+  const handleRedirect = (code) => {
+    !!code && history.push(`/messages/${code}/#`);
+  };
+
   if (token) {
     return (
       <Styled.Container>
@@ -70,6 +79,8 @@ export const Home = (context) => {
                   searchBanks={searchBanks}
                   setBanks={setBanks}
                   setSearchBanks={setSearchBanks}
+                  handleDeleteBank={handleDeleteBank}
+                  handleRedirect={handleRedirect}
                 />
               </>
             ) : (
@@ -80,6 +91,8 @@ export const Home = (context) => {
                   searchBanks={searchBanks}
                   setBanks={setBanks}
                   setSearchBanks={setSearchBanks}
+                  handleDeleteBank={handleDeleteBank}
+                  handleRedirect={handleRedirect}
                 />
               </div>
             )}
