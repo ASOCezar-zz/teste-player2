@@ -1,6 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NavBar /> Should match with a snapshot 1`] = `
+.c0 {
+  position: fixed;
+  inset-inline: 0;
+  width: 44px;
+  height: 44px;
+  background-image: linear-gradient(0deg,#0ea4c2 0%,#13cfb9 100%);
+}
+
+.c0 .btn-open-menu {
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+}
+
+.c0 .options-group,
+.c0 .options-logout {
+  display: none;
+  visibility: hidden;
+}
+
 .c1 {
   position: fixed;
   width: 0;
@@ -78,27 +101,10 @@ exports[`<NavBar /> Should match with a snapshot 1`] = `
   height: 24px;
 }
 
-.c0 {
-  position: fixed;
-  inset-inline: 0;
-  width: 44px;
-  height: 44px;
-  background-image: linear-gradient(0deg,#0ea4c2 0%,#13cfb9 100%);
-}
-
-.c0 .btn-open-menu {
-  padding: 0;
-  border: none;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  outline: none;
-}
-
-.c0 .options-group,
-.c0 .options-logout {
-  display: none;
-  visibility: hidden;
+@media (min-width:1024px) {
+  .c0 {
+    height: 80px;
+  }
 }
 
 @media (min-width:1024px) {
@@ -121,12 +127,6 @@ exports[`<NavBar /> Should match with a snapshot 1`] = `
 
   .c1 .content {
     position: absolute;
-  }
-}
-
-@media (min-width:1024px) {
-  .c0 {
-    height: 80px;
   }
 }
 
@@ -175,6 +175,7 @@ exports[`<NavBar /> Should match with a snapshot 1`] = `
       class="content"
     >
       <a
+        aria-label="Início"
         href="#"
       >
         <img
@@ -202,9 +203,7 @@ exports[`<NavBar /> Should match with a snapshot 1`] = `
           src="group.svg"
         />
       </a>
-      <a
-        href="/login"
-      >
+      <a>
         <img
           src="logout.svg"
         />

@@ -10,7 +10,7 @@ import megaphoneIcon from '../../assets/icons/navlink/megaphone.svg';
 import groupIcon from '../../assets/icons/navlink/group.svg';
 import { ButtonNavlink } from '../ButtonNavlink';
 
-export const NavigationLink = ({ isOpen, onMouseOver, onMouseLeave }) => (
+export const NavigationLink = ({ isOpen, onMouseOver, onMouseLeave, handleLogout }) => (
   <Styled.Container isOpen={isOpen} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} aria-label="menu lateral">
     {isOpen ? (
       <>
@@ -18,14 +18,14 @@ export const NavigationLink = ({ isOpen, onMouseOver, onMouseLeave }) => (
           <img src={logoNavlink} />
         </div>
         <div className="content">
-          <a href="#">
+          <a href="#" aria-label="Início">
             <img src={homeIcon} />
             <span>Início</span>
           </a>
           <ButtonNavlink image={homeIcon} text="Disparos" textOption1="Disparos" textOption2="Criar Disparo" />
           <ButtonNavlink image={groupsIcon} text="Grupos" textOption1="Lista de Grupos" textOption2="Criar Grupo" />
           <ButtonNavlink image={groupsIcon} text="Contatos" textOption1="Contatos" textOption2="Adicionar Contatos" />
-          <a href="/login">
+          <a onClick={handleLogout} aria-label="Sair">
             <img src={logoutIcon} />
             <span>Sair</span>
           </a>
@@ -34,7 +34,7 @@ export const NavigationLink = ({ isOpen, onMouseOver, onMouseLeave }) => (
     ) : (
       <>
         <div className="content" aria-label="menu lateral fechado">
-          <a href="#">
+          <a href="#" aria-label="Início">
             <img src={homeIcon} />
           </a>
           <a href="#">
@@ -46,7 +46,7 @@ export const NavigationLink = ({ isOpen, onMouseOver, onMouseLeave }) => (
           <a href="#">
             <img src={groupIcon} />
           </a>
-          <a href="/login">
+          <a>
             <img src={logoutIcon} />
           </a>
         </div>
@@ -59,4 +59,5 @@ NavigationLink.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   onMouseOver: PropTypes.func.isRequired,
+  handleLogout: PropTypes.func.isRequired,
 };

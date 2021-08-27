@@ -63,10 +63,15 @@ export const Home = (context) => {
     setSearchValue('');
   };
 
+  const handleLogout = () => {
+    nookies.destroy(null, 'USER_TOKEN');
+    history.push('/login');
+  };
+
   if (token) {
     return (
       <Styled.Container>
-        <NavBar />
+        <NavBar handleLogout={handleLogout} />
         <Header pageTitle={<h2>Bancos</h2>} />
         <main>
           <div className="section-top">

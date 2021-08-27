@@ -3,9 +3,11 @@ import userEvent from '@testing-library/user-event';
 import { NavBar } from '.';
 import { renderTheme } from '../../styles/renderTheme';
 
+const fn = jest.fn();
+
 describe('<NavBar />', () => {
   it('Should render a navbar and open it when clicks on the button', () => {
-    renderTheme(<NavBar />);
+    renderTheme(<NavBar handleLogout={fn} />);
     const button = screen.getByAltText('botão do menu').parentElement;
     const menu = screen.getByLabelText('menu lateral');
 

@@ -9,7 +9,11 @@ export const ButtonNavlink = ({ image = '', text, textOption1, textOption2 }) =>
   const [openList, setOpenList] = useState(false);
 
   return (
-    <Styled.Container openList={openList} onClick={() => setOpenList(!openList)}>
+    <Styled.Container
+      aria-label={'botão para abrir ' + text}
+      openList={openList}
+      onClick={() => setOpenList(!openList)}
+    >
       <div className="btn-container">
         <button className="see-more">
           <img src={image} aria-label={image} />

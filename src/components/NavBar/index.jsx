@@ -1,5 +1,9 @@
+import * as Styled from './styles';
+
 import { useState } from 'react';
 import { NavigationLink } from '../NavigationLink';
+
+import PropTypes from 'prop-types';
 
 import logoMenu from '../../assets/logos/logo-menu.svg';
 import homeIcon from '../../assets/icons/navlink/home.svg';
@@ -8,9 +12,7 @@ import groupsIcon from '../../assets/icons/navlink/groups.svg';
 import groupIcon from '../../assets/icons/navlink/group.svg';
 import logoutIcon from '../../assets/icons/navlink/logout.svg';
 
-import * as Styled from './styles';
-
-export const NavBar = () => {
+export const NavBar = ({ handleLogout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -34,7 +36,12 @@ export const NavBar = () => {
         setIsOpen={setMenuOpen}
         onMouseOver={() => setMenuOpen(true)}
         onMouseLeave={() => setMenuOpen(false)}
+        handleLogout={handleLogout}
       />
     </>
   );
+};
+
+NavBar.propTypes = {
+  handleLogout: PropTypes.func.isRequired,
 };

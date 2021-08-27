@@ -111,6 +111,7 @@ exports[`<NavigationLink /> Should render a navigation link and observes mouse e
       class="content"
     >
       <a
+        aria-label="Início"
         href="#"
       >
         <img
@@ -138,9 +139,7 @@ exports[`<NavigationLink /> Should render a navigation link and observes mouse e
           src="group.svg"
         />
       </a>
-      <a
-        href="/login"
-      >
+      <a>
         <img
           src="logout.svg"
         />
