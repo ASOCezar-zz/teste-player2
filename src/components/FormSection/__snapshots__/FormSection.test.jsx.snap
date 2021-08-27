@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormSection /> Should match with a snapshot 1`] = `
+.c0 {
+  min-width: 50%;
+  padding: 89px 24px 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.c0 .logo {
+  width: 107.19px;
+  height: 84px;
+}
+
+.c0 .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.c0 .login-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.c0 .login-title h2 {
+  color: #474f63;
+  font-size: 30px;
+  line-height: 32px;
+}
+
+.c0 .register {
+  display: inline-block;
+}
+
+.c0 .register .register-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6e778d;
+  line-height: 19px;
+}
+
+.c0 .register .register-text .registration-link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #0EC3A3;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.c0 footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #c6cad6;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 12px;
+}
+
+.c1 form .form-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.c1 form .form-group .field-label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #3b3f49;
+  margin-left: 16px;
+}
+
+.c1 form .form-group #email {
+  border: 1px solid #ced4de;
+}
+
+.c1 form .form-group #password {
+  border: 1px solid #ced4de;
+}
+
+.c1 form .form-group .form-input {
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  padding: 12px 16px;
+  outline: none;
+  -webkit-transition: box-shadow 250ms linear;
+  transition: box-shadow 250ms linear;
+  box-shadow: 0px 0px 0px 0px rgba(71,79,99,0.15);
+}
+
+.c1 form .form-group .form-input::-webkit-input-placeholder {
+  color: #b3b9c9;
+}
+
+.c1 form .form-group .form-input::-moz-placeholder {
+  color: #b3b9c9;
+}
+
+.c1 form .form-group .form-input:-ms-input-placeholder {
+  color: #b3b9c9;
+}
+
+.c1 form .form-group .form-input::placeholder {
+  color: #b3b9c9;
+}
+
+.c1 form .form-group .form-input:focus {
+  box-shadow: 0px 10px 15px 0px rgba(71,79,99,0.15);
+}
+
+.c1 form .form-group .form-error {
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 5.75px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 form .form-group .form-error p {
+  color: #ff403d;
+  font-size: 11px;
+  weight: 500;
+}
+
+.c1 form .btn-login {
+  width: 100%;
+  height: 43px;
+  border: none;
+  cursor: pointer;
+  background-color: #0EC3A3;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.c1 form .btn-login:hover {
+  background-color: rgba(14,195,163,0.7);
+}
+
+.c1 form .btn-login:active {
+  background-color: rgba(87,180,163,1);
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding: 89px 10%;
+  }
+}
+
+<section
+  class="c0"
+>
+  <div
+    class="logo"
+  >
+    <img
+      aria-label="logo da informe-se"
+      src="login-logo.svg"
+    />
+  </div>
+  <div
+    class="login-title"
+  >
+    <h2>
+      Dispare mensagens quando e para quem você quiser.
+    </h2>
+  </div>
+  <div
+    class="c1"
+  >
+    <form
+      aria-label="formulário de login"
+    >
+      <div
+        class="form-group"
+      >
+        <label
+          class="field-label"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          autocomplete="off"
+          class="form-input"
+          id="email"
+          name="email"
+          placeholder="E-mail"
+          required=""
+          type="text"
+          value=""
+        />
+        <label
+          class="field-label"
+          for="password"
+        >
+          Senha
+        </label>
+        <input
+          class="form-input"
+          id="password"
+          name="senha"
+          placeholder="Senha"
+          required=""
+          type="password"
+          value=""
+        />
+      </div>
+      <button
+        class="btn-login"
+        type="submit"
+      >
+        Entrar
+      </button>
+    </form>
+  </div>
+  <div
+    class="register"
+  >
+    <span
+      class="register-text"
+    >
+      Não tem uma conta?  
+      <a
+        class="registration-link"
+        href="#"
+      >
+        Cadastre-se
+      </a>
+    </span>
+  </div>
+  <footer>
+    <span>
+      Copyright © 2010-2021 - Informem-se Company S.L. All rights reserved.
+    </span>
+  </footer>
+</section>
+`;
