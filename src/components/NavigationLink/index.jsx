@@ -11,7 +11,7 @@ import groupIcon from '../../assets/icons/navlink/group.svg';
 import { ButtonNavlink } from '../ButtonNavlink';
 
 export const NavigationLink = ({ isOpen, onMouseOver, onMouseLeave }) => (
-  <Styled.Container isOpen={isOpen} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+  <Styled.Container isOpen={isOpen} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} aria-label="menu lateral">
     {isOpen ? (
       <>
         <div className="navlink-title">
