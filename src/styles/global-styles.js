@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Red Hat Display', sans-serif;
 
     ::-webkit-scrollbar {
       width: 10px

@@ -68,8 +68,12 @@ export const Container = styled.header`
         align-items: center;
         justify-content: flex-start;
         user-select: none;
-
-        img {
+        
+        .title-content {
+          display: flex;
+          flex-direction: row;
+          
+          img {
           cursor: pointer;
         }
 
@@ -82,6 +86,9 @@ export const Container = styled.header`
           letter-spacing: 0em;
           white-space: nowrap;
         }
+        }
+
+
       }
 
       .page-title {

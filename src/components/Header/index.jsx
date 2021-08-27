@@ -14,7 +14,7 @@ export const Header = ({ pageTitle, handleClick = undefined }) => {
     <Styled.Container>
       <div onClick={handleClick} className="page-title">
         <div className="top-page">
-          <h2>{pageTitle}</h2>
+          <div className="title-content">{pageTitle}</div>
         </div>
       </div>
       <div className="funcionalities">
