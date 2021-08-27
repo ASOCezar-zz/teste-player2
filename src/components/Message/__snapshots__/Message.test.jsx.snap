@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Message /> Should render a message 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.c0 .message-title {
+  font-size: 12px;
+  line-height: 16px;
+  color: #3b3f49;
+}
+
+.c0 .message-text {
+  color: #474f63;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.c0 .message-attachment {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 6.25px;
+}
+
+.c0 .message-attachment p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #6e778d;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h5
+      class="message-title"
+    >
+      Mensagem Teste
+    </h5>
+    <p
+      class="message-text"
+    >
+      Teste
+    </p>
+  </div>
+</div>
+`;
