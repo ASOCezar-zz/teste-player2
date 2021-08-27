@@ -51,9 +51,8 @@ export const SearchInput = ({ banks = [], reference, searchValue = '', setSearch
 
 SearchInput.propTypes = {
   banks: PropTypes.array,
-  reference: PropTypes.func.isRequired,
+  reference: PropTypes.object.isRequired,
   searchValue: PropTypes.string,
   setSearchValue: PropTypes.func.isRequired,
-  setIsFocused: PropTypes.func.isRequired,
   setSearchBanks: PropTypes.func.isRequired,
 };

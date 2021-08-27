@@ -32,8 +32,8 @@ export const NavBar = () => {
       <NavigationLink
         isOpen={menuOpen}
         setIsOpen={setMenuOpen}
-        onMouseOver={() => setMenuOpen(true)}
-        onMouseLeave={() => setMenuOpen(false)}
+        // onMouseOver={() => setMenuOpen(true)}
+        // onMouseLeave={() => setMenuOpen(false)}
       />
     </>
   );

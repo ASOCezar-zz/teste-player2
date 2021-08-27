@@ -4,9 +4,9 @@ const openedMenu = (isOpen) =>
   isOpen
     ? css`
         width: 35%;
-
         .content {
-          padding-inline: 90px;
+          margin-top: 200px;
+          padding-inline: 4px;
         }
       `
     : css`
@@ -46,43 +46,16 @@ export const Container = styled.div`
       display: flex;
       flex-direction: column;
       gap: 34px;
-      margin-top: 104px;
+      margin-top: 30px;
       width: 100%;
       height: 100%;
       padding-inline: 20px;
-
-      .see-more {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 250ms linear;
-        cursor: pointer;
-
-        a {
-          :hover {
-            border: none;
-            box-shadow: none;
-          }
-        }
-
-        :hover {
-          transform: scale(1.02);
-          box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
-          border-radius: 50px;
-        }
-
-        img {
-          cursor: pointer;
-        }
-      }
 
       a {
         text-decoration: none;
         color: ${theme.colors.white};
         display: flex;
         flex-direction: row;
-        font-family: 'Red Hat Display', sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
@@ -92,12 +65,6 @@ export const Container = styled.div`
         transition: all 250ms linear;
 
         cursor: pointer;
-
-        :hover {
-          transform: scale(1.02);
-          box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
-          border-radius: 50px;
-        }
 
         img {
           width: 24px;
@@ -115,8 +82,6 @@ export const Container = styled.div`
 
       .content {
         position: absolute;
-        top: 200px;
-        gap: 50px;
       }
     }
   `}
