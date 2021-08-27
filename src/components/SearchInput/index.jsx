@@ -6,21 +6,8 @@ import searchIcon from '../../assets/icons/search-icon.svg';
 import clearIcon from '../../assets/icons/cleanField-icon.svg';
 import { useState } from 'react';
 
-export const SearchInput = ({ banks = [], reference, searchValue = '', setSearchValue, setSearchBanks }) => {
+export const SearchInput = ({ reference, clearField, handleChange, searchValue = '' }) => {
   const [isFocused, setIsFocused] = useState(false);
-
-  const handleChange = (e) => {
-    const { value } = e.target;
-    setSearchValue(value);
-    searchValue
-      ? setSearchBanks(banks.filter((bank) => bank.name.toLowerCase().includes(searchValue.toLowerCase())))
-      : banks;
-  };
-
-  const clearField = () => {
-    reference.current.value = '';
-    setSearchValue('');
-  };
 
   return (
     <Styled.Container isFocused={isFocused}>
@@ -50,9 +37,8 @@ export const SearchInput = ({ banks = [], reference, searchValue = '', setSearch
 };
 
 SearchInput.propTypes = {
-  banks: PropTypes.array,
   reference: PropTypes.object.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  clearField: PropTypes.func.isRequired,
   searchValue: PropTypes.string,
-  setSearchValue: PropTypes.func.isRequired,
-  setSearchBanks: PropTypes.func.isRequired,
 };

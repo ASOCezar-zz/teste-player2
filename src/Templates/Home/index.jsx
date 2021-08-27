@@ -48,6 +48,19 @@ export const Home = (context) => {
     !!code && history.push(`/messages/${code}/#`);
   };
 
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setSearchValue(value);
+    searchValue
+      ? setSearchBanks(banks.filter((bank) => bank.name.toLowerCase().includes(searchValue.toLowerCase())))
+      : banks;
+  };
+
+  const clearField = () => {
+    searchField.current.value = '';
+    setSearchValue('');
+  };
+
   if (token) {
     return (
       <Styled.Container>
@@ -60,11 +73,10 @@ export const Home = (context) => {
               <h4>{isLoading ? 'Carregando ...' : banks.length + ' bancos'}</h4>
             </div>
             <SearchInput
-              banks={banks}
+              handleChange={handleChange}
+              clearField={clearField}
               reference={searchField}
               searchValue={searchValue}
-              setSearchValue={setSearchValue}
-              setSearchBanks={setSearchBanks}
             />
           </div>
           <div className="section-content">

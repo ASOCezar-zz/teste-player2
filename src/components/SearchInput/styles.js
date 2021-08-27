@@ -9,7 +9,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     padding-inline-end: 12px;
-    border: ${isFocused ? `1px solid ${theme.colors.green}` : '1px solid rgba(206, 212, 222, 1)'};
+    border: ${isFocused ? `1px solid ${theme.colors.green}` : `1px solid ${theme.colors.darkGray}`};
 
     ${theme.media.tablet} {
       width: 280px;
