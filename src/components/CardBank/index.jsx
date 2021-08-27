@@ -10,15 +10,18 @@ import deleteIcon from '../../assets/icons/delete-icon.svg';
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 
-export const CardBank = ({ name, code = null, ispb }) => {
+export const CardBank = ({ name, code = null, ispb, banks, setBanks, searchBanks, setSearchBanks }) => {
   const history = useHistory();
 
   const [openOptions, setOpenOptions] = useState(false);
 
-  const handleDeleteBank = () => {};
-
   const handleRedirect = (code) => {
     !!code && history.push(`/messages/${code}/#`);
+  };
+
+  const handleDeleteBank = (ispb) => {
+    setBanks(banks.filter((bank) => bank.ispb !== ispb));
+    setSearchBanks(searchBanks.filter((bank) => bank.ispb !== ispb));
   };
 
   return (
@@ -35,7 +38,7 @@ export const CardBank = ({ name, code = null, ispb }) => {
         {openOptions && <div className="optionsBackground" onClick={() => setOpenOptions(false)} />}
         <div className="options-card" onClick={() => setOpenOptions(!openOptions)}>
           <button className="btn-options">
-            <div className="tooltip" onClick={handleDeleteBank}>
+            <div className="tooltip" onClick={() => handleDeleteBank(ispb)}>
               <div className="tooltip-text">
                 <img src={deleteIcon} />
                 <p>Deletar Banco</p>
@@ -64,4 +67,8 @@ CardBank.propTypes = {
   name: PropTypes.string.isRequired,
   code: PropTypes.number,
   ispb: PropTypes.string.isRequired,
+  banks: PropTypes.array.isRequired,
+  setBanks: PropTypes.func.isRequired,
+  searchBanks: PropTypes.array.isRequired,
+  setSearchBanks: PropTypes.func.isRequired,
 };

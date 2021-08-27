@@ -6,12 +6,11 @@ import { useHistory, useParams } from 'react-router';
 import nookies from 'nookies';
 
 import backArrow from '../../assets/icons/back-arrow.svg';
-import attachmentIcon from '../../assets/icons/attachment-icon.svg';
 
 import { Header } from '../../components/Header';
 
-import messages from './dataDispatchs';
 import { NavBar } from '../../components/NavBar';
+import { MessagesContainer } from '../../components/MessagesContainer';
 
 export const BankDetails = (context) => {
   const history = useHistory();
@@ -21,6 +20,12 @@ export const BankDetails = (context) => {
 
   const cookies = nookies.get(context);
   const token = cookies.USER_TOKEN;
+
+  useEffect(() => {
+    !token && history.push('/login');
+
+    //eslint-disable-next-line
+  }, [token]);
 
   const handleBackToHome = () => {
     history.goBack();
@@ -56,30 +61,12 @@ export const BankDetails = (context) => {
               <h4 className="section-title">IPSB: {bank.ispb}</h4>
               <h4 className="section-subtitle">8:30</h4>
             </div>
-            <div className="messages-container">
-              {messages.map((message) => (
-                <div key={message.title} className="message-content">
-                  <h5 className="message-title">{message.title}</h5>
-                  <p className="message-text">{message.text}</p>
-                  {message.attachments.length > 0 &&
-                    message.attachments.map((attachment) => (
-                      <div className="message-attachment" key={attachment.name + attachment.extension}>
-                        <img src={attachmentIcon} />
-                        <p>
-                          {attachment.name}
-                          {attachment.extension} - {attachment.size}
-                        </p>
-                      </div>
-                    ))}
-                </div>
-              ))}
-            </div>
+            <MessagesContainer />
           </div>
         </main>
       </Styled.Container>
     );
   } else {
-    history.push('/login');
     return null;
   }
 };

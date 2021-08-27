@@ -1,31 +1,12 @@
 import * as Styled from './styles';
-import loginLogo from '../../assets/logos/login-logo.svg';
-import { FormLogin } from '../../components/FormLogin';
+
 import loginImage from '../../assets/images/login-image.svg';
+import { FormSection } from '../../components/FormSection';
 
 export const Login = () => {
   return (
     <Styled.Container>
-      <section className="form-section">
-        <div className="logo">
-          <img src={loginLogo} />
-        </div>
-        <div className="login-title">
-          <h2>Dispare mensagens quando e para quem você quiser.</h2>
-        </div>
-        <FormLogin />
-        <div className="register">
-          <span className="register-text">
-            Não tem uma conta? &nbsp;
-            <a href="#" className="registration-link">
-              Cadastre-se
-            </a>
-          </span>
-        </div>
-        <footer>
-          <span>Copyright © 2010-2021 - Informem-se Company S.L. All rights reserved.</span>
-        </footer>
-      </section>
+      <FormSection />
       <section className="image-section">
         <div className="imageSection-content">
           <img src={loginImage} className="imageSection-image" />

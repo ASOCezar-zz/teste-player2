@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 
+import notifications from './dataNotifications';
+
 import withNotificationIcon from '../../assets/icons/withNotification-icon.svg';
+import withoutNotificationIcon from '../../assets/icons/withoutNotification-icon.svg';
 import arrowDownIcon from '../../assets/icons/arrowDown-icon.svg';
 import { Button } from '../Button';
 
@@ -14,7 +17,12 @@ export const Header = ({ pageTitle, handleClick = undefined }) => {
       </div>
       <div className="funcionalities">
         <Button text="+ Criar Banco" />
-        <img src={withNotificationIcon} className="notification-button" />
+        {notifications.length > 0 ? (
+          <img src={withNotificationIcon} className="notification-button" />
+        ) : (
+          <img src={withoutNotificationIcon} className="notification-button" />
+        )}
+
         <button className="btn-profile">
           <p>
             Olá, <strong>Beleza Rara</strong>
