@@ -15,6 +15,8 @@ export const Login = () => {
   const history = useHistory();
   const userContext = useContext(UserContext);
 
+  document.title = 'informe-se | Login';
+
   const authenticate = (email, password) => {
     userContext.userDispatch({
       type: types.SET_USER_DATA,
