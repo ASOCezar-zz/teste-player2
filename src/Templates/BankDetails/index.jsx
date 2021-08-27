@@ -34,7 +34,8 @@ export const BankDetails = (context) => {
   useEffect(() => {
     fetch(`https://brasilapi.com.br/api/banks/v1/${id}`)
       .then((res) => res.json())
-      .then((res) => setBank(res));
+      .then((res) => setBank(res))
+      .catch((err) => console.error(err.message));
   }, [id]);
 
   if (token) {

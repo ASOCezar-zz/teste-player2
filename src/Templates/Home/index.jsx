@@ -31,10 +31,12 @@ export const Home = (context) => {
 
   useEffect(() => {
     setIsLoading(true);
+
     fetch('https://brasilapi.com.br/api/banks/v1')
       .then((res) => res.json())
       .then((res) => setBanks(res))
-      .then(() => setIsLoading(false));
+      .then(() => setIsLoading(false))
+      .catch((err) => console.error(err.message));
   }, []);
 
   if (token) {
