@@ -35,12 +35,11 @@ export const BankDetails = (context) => {
     document.title = `informe-se | Carregando ...`;
     fetch(`https://brasilapi.com.br/api/banks/v1/${id}`)
       .then((res) => res.json())
-      .then((res) => (document.title = `informe-se | ${res.name}`))
       .then((res) => setBank(res))
       .catch((err) => console.error(err.message));
-
-    //eslint-disable-next-line
   }, [id]);
+
+  document.title = `informe-se | ${bank.name}`;
 
   if (token) {
     return (
