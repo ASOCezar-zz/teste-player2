@@ -10,8 +10,6 @@ export const FormLogin = ({ authenticate }) => {
   const emailInput = useRef();
   const passwordInput = useRef();
 
-  console.log(authenticate);
-
   const [emailValue, setEmailValue] = useState('');
   const [passwordValue, setPasswordValue] = useState('');
   const [isEmailInvalid, setIsEmailInvalid] = useState(false);
