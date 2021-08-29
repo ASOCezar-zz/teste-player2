@@ -31,6 +31,11 @@ export const BankDetails = (context) => {
     history.goBack();
   };
 
+  const handleLogout = () => {
+    nookies.destroy(null, 'USER_TOKEN');
+    history.push('/login');
+  };
+
   useEffect(() => {
     document.title = `informe-se | Carregando ...`;
     fetch(`https://brasilapi.com.br/api/banks/v1/${id}`)
@@ -44,7 +49,7 @@ export const BankDetails = (context) => {
   if (token) {
     return (
       <Styled.Container>
-        <NavBar />
+        <NavBar handleLogout={handleLogout} />
         <Header
           pageTitle={
             <>
