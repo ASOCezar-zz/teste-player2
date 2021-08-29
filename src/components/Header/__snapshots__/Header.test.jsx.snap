@@ -110,11 +110,21 @@ exports[`<Header /> Should match with a snapshot 1`] = `
   user-select: none;
 }
 
-.c0 .top-page img {
+.c0 .top-page .title-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c0 .top-page .title-content img {
   cursor: pointer;
 }
 
-.c0 .top-page h3 {
+.c0 .top-page .title-content h3 {
   color: #b3b9c9;
   font-size: 20px;
   font-style: normal;
@@ -207,9 +217,11 @@ exports[`<Header /> Should match with a snapshot 1`] = `
       <div
         class="top-page"
       >
-        <h2>
+        <div
+          class="title-content"
+        >
           Teste
-        </h2>
+        </div>
       </div>
     </div>
     <div

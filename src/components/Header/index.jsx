@@ -9,7 +9,7 @@ import { Button } from '../Button';
 
 import * as Styled from './styles';
 
-export const Header = ({ pageTitle, handleClick = undefined }) => {
+export const Header = ({ pageTitle, buttonContent, handleClick = undefined }) => {
   return (
     <Styled.Container>
       <div onClick={handleClick} className="page-title">
@@ -18,7 +18,7 @@ export const Header = ({ pageTitle, handleClick = undefined }) => {
         </div>
       </div>
       <div className="funcionalities">
-        <Button text="+ Criar Banco" />
+        <Button text={buttonContent} />
         {notifications.length > 0 ? (
           <img src={withNotificationIcon} className="notification-button" alt="icone com notificações" />
         ) : (
@@ -38,5 +38,6 @@ export const Header = ({ pageTitle, handleClick = undefined }) => {
 
 Header.propTypes = {
   pageTitle: PropTypes.node.isRequired,
+  buttonContent: PropTypes.node.isRequired,
   handleClick: PropTypes.func,
 };

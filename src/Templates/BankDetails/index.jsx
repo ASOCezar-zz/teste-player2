@@ -6,6 +6,7 @@ import { useHistory, useParams } from 'react-router';
 import nookies from 'nookies';
 
 import backArrow from '../../assets/icons/back-arrow.svg';
+import pencilIcon from '../../assets/icons/pencil-icon.svg';
 
 import { Header } from '../../components/Header';
 
@@ -56,6 +57,11 @@ export const BankDetails = (context) => {
               <img src={backArrow} />
               <h3>{bank.name}</h3>
             </>
+          }
+          buttonContent={
+            <p>
+              <img src={pencilIcon} /> Editar Banco
+            </p>
           }
           handleClick={handleBackToHome}
         />

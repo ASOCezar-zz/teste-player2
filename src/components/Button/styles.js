@@ -26,6 +26,11 @@ export const Container = styled.div`
         background-color: rgba(87, 180, 163, 1);
       }
       p {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;

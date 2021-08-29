@@ -72,7 +72,7 @@ export const Home = (context) => {
     return (
       <Styled.Container>
         <NavBar handleLogout={handleLogout} />
-        <Header pageTitle={<h2>Bancos</h2>} />
+        <Header pageTitle={<h2>Bancos</h2>} buttonContent="+ Criar Banco" />
         <main>
           <div className="section-top">
             <div className="section-title">
